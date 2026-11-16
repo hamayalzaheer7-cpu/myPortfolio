@@ -5,7 +5,6 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ExperienceEducation from "./components/ExperienceEducation";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CvModal from "./components/CvModal";
 
@@ -40,7 +39,6 @@ export default function App() {
         <Skills />
         <Projects />
         <ExperienceEducation />
-        <Contact />
       </main>
       <Footer />
       <CvModal isOpen={cvOpen} onClose={() => setCvOpen(false)} />
