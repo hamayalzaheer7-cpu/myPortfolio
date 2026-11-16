@@ -1,27 +1,37 @@
 import React from "react";
-import { ArrowUpRight, Mail, FileText, MapPin, GraduationCap } from "lucide-react";
+import { ArrowUpRight, FileText, MapPin, GraduationCap, Sparkles } from "lucide-react";
 import { PERSONAL_INFO } from "../data/portfolioData";
 
 export default function Hero({ onOpenCv }) {
   return (
     <section
       id="home"
-      className="section-spacing border-bottom border-hairline"
-      style={{ minHeight: "88vh", display: "flex", alignItems: "center" }}
+      className="section-spacing border-bottom border-hairline position-relative overflow-hidden"
+      style={{ minHeight: "90vh", display: "flex", alignItems: "center" }}
     >
       <div className="container">
         <div className="row align-items-center g-5">
           {/* Left Column: Editorial Introduction */}
           <div className="col-lg-7">
-            <div className="mb-4">
-              <span className="eyebrow-label">
-                {PERSONAL_INFO.fullName} — {PERSONAL_INFO.title}
+            {/* Live Status Badge */}
+            <div className="mb-3 d-inline-flex align-items-center gap-2 px-3 py-1.5 bg-beige border border-hairline rounded-pill">
+              <span
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  backgroundColor: "#2E7D32",
+                  borderRadius: "50%",
+                  display: "inline-block",
+                }}
+              />
+              <span className="font-mono-tech small text-charcoal">
+                Available for MERN Stack Internships
               </span>
             </div>
 
             <h1
-              className="editorial-heading mb-4"
-              style={{ fontSize: "clamp(2.65rem, 5.2vw, 4.4rem)" }}
+              className="editorial-heading mb-4 mt-2"
+              style={{ fontSize: "clamp(2.75rem, 5.5vw, 4.5rem)" }}
             >
               Building Digital Experiences with{" "}
               <em className="fw-normal text-brown">Creativity</em> &amp;{" "}
@@ -42,22 +52,17 @@ export default function Hero({ onOpenCv }) {
                 <ArrowUpRight size={17} />
               </a>
 
-              <a href="#contact" className="btn-editorial-secondary">
-                <Mail size={16} />
-                <span>Let&apos;s Connect</span>
-              </a>
-
               <button
                 type="button"
                 onClick={onOpenCv}
-                className="btn-editorial-ghost ms-sm-2"
+                className="btn-editorial-secondary"
               >
                 <FileText size={16} />
-                <span>Download CV</span>
+                <span>View &amp; Download CV</span>
               </button>
             </div>
 
-            {/* Subtle Metadata Strip */}
+            {/* Metadata Strip */}
             <div className="pt-4 border-top border-hairline d-flex flex-wrap gap-4 text-muted-editorial small">
               <span className="d-inline-flex align-items-center gap-2">
                 <MapPin size={15} className="text-brown" />
@@ -70,15 +75,17 @@ export default function Hero({ onOpenCv }) {
             </div>
           </div>
 
-          {/* Right Column: Typographic Monogram Identity */}
+          {/* Right Column: Monogram & Quick Focus Box */}
           <div className="col-lg-5">
-            <div className="monogram-frame">
+            <div className="monogram-frame shadow-sm">
               <div className="monogram-inner text-center">
                 <div className="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-hairline">
                   <span className="font-mono-tech small text-muted-editorial">
-                    PORTFOLIO / EDITION
+                    PORTFOLIO / 2026
                   </span>
-                  <span className="font-mono-tech small text-brown">MERN</span>
+                  <span className="font-mono-tech small text-brown d-flex align-items-center gap-1">
+                    <Sparkles size={13} /> MERN
+                  </span>
                 </div>
 
                 <div
@@ -102,9 +109,8 @@ export default function Hero({ onOpenCv }) {
 
                 <div className="pt-3 border-top border-hairline text-start">
                   <p className="small text-muted-editorial mb-0">
-                    <strong className="text-charcoal fw-medium">Focus:</strong>{" "}
-                    MongoDB, Express.js, React.js, Node.js &amp; Creative Web
-                    Interfaces.
+                    <strong className="text-charcoal fw-medium">Core Stack:</strong>{" "}
+                    React.js, Node.js, Express.js, MongoDB &amp; Modern UI Architecture.
                   </p>
                 </div>
               </div>

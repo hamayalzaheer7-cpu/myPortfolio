@@ -63,62 +63,64 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Architectural Project List */}
-        <div className="bg-cream border-start border-end border-hairline">
+        {/* Modern Card Grid Layout */}
+        <div className="row g-4">
           {filteredProjects.map((project) => (
-            <article key={project.id} className="project-item">
-              <div className="row align-items-center g-4">
-                {/* Index & Category */}
-                <div className="col-lg-2">
-                  <span className="font-mono-tech small text-brown d-block">
-                    /{project.id}
-                  </span>
-                  <span className="font-mono-tech small text-muted-editorial">
-                    {project.category}
-                  </span>
-                </div>
+            <div key={project.id} className="col-md-6 col-lg-4">
+              <div 
+                className="h-100 p-4 bg-cream border border-hairline d-flex flex-column justify-content-between position-relative transition-all hover-card"
+                style={{ borderRadius: "4px" }}
+              >
+                <div>
+                  <div className="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom border-hairline">
+                    <span className="font-mono-tech small text-brown">
+                      /{project.id} — {project.category}
+                    </span>
+                  </div>
 
-                {/* Title & Description */}
-                <div className="col-lg-6">
                   <h3 className="font-serif fs-3 mb-2 text-charcoal">
                     {project.title}
                   </h3>
-                  <p className="text-muted-editorial mb-3 small">
+                  <p className="text-muted-editorial small mb-4">
                     {project.summary}
                   </p>
-                  <div className="d-flex flex-wrap gap-2">
+                </div>
+
+                <div>
+                  <div className="d-flex flex-wrap gap-1.5 mb-4">
                     {project.technologies.map((tech) => (
                       <span key={tech} className="tech-tag">
                         {tech}
                       </span>
                     ))}
                   </div>
-                </div>
 
-                {/* Action Links */}
-                <div className="col-lg-4 d-flex flex-wrap align-items-center justify-content-lg-end gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setActiveProject(project)}
-                    className="btn-editorial-secondary py-2 px-3 small"
-                  >
-                    <Eye size={15} />
-                    <span>Details</span>
-                  </button>
+                  <div className="pt-3 border-top border-hairline d-flex align-items-center justify-content-between">
+                    <button
+                      type="button"
+                      onClick={() => setActiveProject(project)}
+                      className="btn-editorial-secondary py-1.5 px-2.5 small"
+                      style={{ fontSize: "0.8rem" }}
+                    >
+                      <Eye size={14} />
+                      <span>Details</span>
+                    </button>
 
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-editorial-primary py-2 px-3 small"
-                  >
-                    <Github size={15} />
-                    <span>GitHub</span>
-                    <ArrowUpRight size={14} className="project-arrow" />
-                  </a>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn-editorial-primary py-1.5 px-2.5 small"
+                      style={{ fontSize: "0.8rem" }}
+                    >
+                      <Github size={14} />
+                      <span>Code</span>
+                      <ArrowUpRight size={13} />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>
