@@ -1,44 +1,18 @@
+
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f7fa;
-  --text-primary: #1a1a2e;
-  --text-secondary: #555770;
-  --accent: #4361ee;
-  --border: #e0e0e0;
-  --shadow: rgba(0, 0, 0, 0.08);
-}
+  --bg-cream: #FAF7F2;
+  --bg-beige: #F0E6E3;
+  --bg-taupe: #E6D5D3;
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+  --ink-charcoal: #282124;
+  --ink-muted: #75666B;
 
-.card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px var(--shadow);
-}
+  --accent-brown: #702D3D;
+  --accent-brown-dark: #4B1F2B;
 
-button {
-  background-color: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
+  --border-hairline: #DCD0CC;
 
-button:hover {
-  opacity: 0.9;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
